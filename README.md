@@ -1,10 +1,14 @@
-# Project Title
+# SortArrayList
 
-One Paragraph of project description goes here
+Sort ArrayList) Write the following method that sorts an ArrayList:
+public static <E extends Comparable<E>>
+  void sort(ArrayList<E> list)
+  Basically the assignment wants to me again like the last assignment create a method that instead of shuffling
+  it sorts the contents in whatever way you want to to be sorted, so like lets say you want it be ascending then
+  you can put some numbers and have the numbers go from 0-10 or descending and have it go from 10-0.
 
 ## Example Output
 
-This image will display as your example output. Name the image README.jpg in your project folder.
 
 ![Sample Output](README.jpg)
 
@@ -41,7 +45,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Notes
 
-Explain any issues or testing instructions.
+No Issues or Notes
 
 ## Do not change content below this line
 ## Adapted from a README Built With
