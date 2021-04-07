@@ -9,39 +9,76 @@ public static <E extends Comparable<E>>
 
 ## Example Output
 
-
 ![Sample Output](README.jpg)
 
 ## Analysis Steps
 
-This section should restate the assignment and explain how you analyzed the requirements in order 
-to develop a solution.
+Well this assignment is similar to the other assignment but instead of shuffling you need to 
+sort out the objects it was easy to analyze what I needed to do because all you need to do is mirror what you do
+on the other assignment but add a little bit more to the program for it to work properly. Also the assignment gives you
+the method so all you need to do is just do the rest within the method for it to work.
 
 ### Design
 
-How did you approach your program design? Did you use multiple classes to define various objects?
+I used the method given to me and the main class plus another class which is the ArrayShuffle class
+because I need that class to show that its sorting by comparing the differences.
 
 ```
-Give examples
+System.out.println(list);
+        ArrayListShuffle.shuffle(list);
+        System.out.println(list);
+        sort(list);
+        System.out.println(list);
 ```
 
 ### Testing
 
-A step by step series of examples that you developed to properly test the program. 
-
-Say what the step will be
-
+Step 1:Create the Array
 ```
-Give the example
-```
+ArrayList<Integer> list = new ArrayList<>();
 
-And repeat
-
-```
-until finished
+        for (int i = 0; i < 10; i++) {
+            list.add(i);
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Step 2: Add the method
+
+```
+ public static <E extends Comparable<E>> void sort(ArrayList<E> list)
+```
+
+Step 3: Sort the array method
+
+```
+
+        for (int i = 0; i < list.size() - 1; i++) {
+            E currentMin = list.get(i);
+            int min = i;
+            for (int j = i + 1; j < list.size(); j++) {
+
+                if (list.get(j).compareTo(currentMin) < 0) {
+                    currentMin = list.get(j);
+                    min = j;
+                }
+            }
+
+            if (min != i) {
+                list.set(min, list.get(i));
+                list.set(i, currentMin);
+```
+
+Step 4: Print the lists sort/shuffle
+
+```
+  System.out.println(list);
+        ArrayListShuffle.shuffle(list);
+        System.out.println(list);
+        sort(list);
+        System.out.println(list);
+```
+
+You can use this data to see how it would work if you sorted out an array
+like the picture that is shown above.
 
 ## Notes
 
